@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import db from "../firebase";
 import { setMovies } from "../features/movie/movieSlice";
 import { selectUserName } from "../features/user/userSlice";
-
+import NavHeader from "./navHeader";
 const Home = (props) => {
   const dispatch = useDispatch();
   const userName = useSelector(selectUserName);
@@ -56,6 +56,7 @@ const Home = (props) => {
 
   return (
     <Container>
+      <NavHeader/>
       <ImgSlider />
       <Viewers />
       <Recommends />

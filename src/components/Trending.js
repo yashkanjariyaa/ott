@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectTrending } from "../features/movie/movieSlice";
-
+import movieObject from "../disneyPlusMoviesData.json";
 const Trending = (props) => {
-  const movies = useSelector(selectTrending);
+  const movies = [movieObject.movies[16], movieObject.movies[15], movieObject.movies[14], movieObject.movies[13]];
 
   return (
     <Container>

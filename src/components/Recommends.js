@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectRecommend } from "../features/movie/movieSlice";
-
+import movieObject from "../disneyPlusMoviesData.json";
 const Recommends = (props) => {
-  const movies = useSelector(selectRecommend);
+  const movies = [movieObject.movies[1], movieObject.movies[2], movieObject.movies[3], movieObject.movies[4]];
   console.log(movies, ":🛢️");
 
   return (

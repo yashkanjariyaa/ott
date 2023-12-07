@@ -2,9 +2,10 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectOriginal } from "../features/movie/movieSlice";
+import movieObject from "../disneyPlusMoviesData.json";
 
 const Originals = (props) => {
-  const movies = useSelector(selectOriginal);
+  const movies = [movieObject.movies[9], movieObject.movies[10], movieObject.movies[11], movieObject.movies[12]];
 
   return (
     <Container>

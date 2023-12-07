@@ -10,7 +10,7 @@ import {
   setSignOutState,
 } from "../features/user/userSlice";
 import SearchBar from "./Search";
-const Header = (props) => {
+const NavHeader = (props) => {
   const dispatch = useDispatch();
   const history = useHistory();
   const userName = useSelector(selectUserName);
@@ -61,11 +61,6 @@ const Header = (props) => {
       <Logo>
         <img src="/images/logo.svg" alt="Disney+" />
       </Logo>
-
-      {!userName ? (
-        <Login href="/login">Login</Login>
-      ) : (
-        <>
           <NavMenu>
             <a href="/home">
               <img src="/images/home-icon.svg" alt="HOME" />
@@ -95,8 +90,6 @@ const Header = (props) => {
               <span onClick={handleAuth}>Sign out</span>
             </DropDown>
           </SignOut>
-        </>
-      )}
     </Nav>
   );
 };
@@ -253,4 +246,4 @@ const SignOut = styled.div`
   }
 `;
 
-export default Header;
+export default NavHeader;

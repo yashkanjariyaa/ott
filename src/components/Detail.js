@@ -2,27 +2,10 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import db from "../firebase";
-
+import movieObject from "../disneyPlusMoviesData.json";
 const Detail = (props) => {
   const { id } = useParams();
-  const [detailData, setDetailData] = useState({});
-
-  useEffect(() => {
-    db.collection("movies")
-      .doc(id)
-      .get()
-      .then((doc) => {
-        if (doc.exists) {
-          setDetailData(doc.data());
-        } else {
-          console.log("no such document in firebase 🔥");
-        }
-      })
-      .catch((error) => {
-        console.log("Error getting document:", error);
-      });
-  }, [id]);
-
+  const detailData = movieObject.movies[id];
   return (
     <Container>
       <Background>
