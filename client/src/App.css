@@ -1,0 +1,52 @@
+/* Style for SearchBar */
+.search-bar {
+    position: relative;
+    width: 300px;
+    margin: 20px;
+    z-index: 99;
+  }
+  
+ .search-bar input[type='text'] {
+    width: 100%;
+    background-color: #252525;
+    color: white;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  /* Style for Dropdown */
+  .dropdown {
+    position: absolute;
+    width: 100%;
+    background-color: #252525;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style-type: none;
+    padding: 0;
+    height: 10vh;
+    overflow-y: scroll;
+    z-index: 99;
+  }
+  
+  .dropdown li {
+    padding: 8px;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif; /* Change the font family */
+    font-size: 14px; /* Adjust font size as needed */
+    font-weight: normal; /* Reset font weight if needed */
+    letter-spacing: normal; /* Reset letter spacing */
+  }
+  
+  .dropdown li:hover {
+    background-color: #f2f2f2;
+    color:#252525;
+  }
+  
+  .links{
+    margin: 0 3vw;
+  }
